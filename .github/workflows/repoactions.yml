@@ -18,3 +18,12 @@ jobs:
         with:
           name: lint.html
           path: app/build/reports/lint-results-debug.html
+
+  detekt:
+    ## 4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: detekt
+        uses: natiginfo/action-detekt-all@1.17.0
