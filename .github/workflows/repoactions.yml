@@ -19,19 +19,19 @@ jobs:
           name: lint.html
           path: app/build/reports/lint-results-debug.html
 
-  ##detekt:
-    ## 4
-    ##runs-on: ubuntu-latest
-    ##steps:
-      ##- name: Checkout the code
-        ##uses: actions/checkout@v2
-      ##- name: detekt
-        ##uses: natiginfo/action-detekt-all@1.17.0
-
   detekt:
+    ## 4
     runs-on: ubuntu-latest
-      steps:
-        - name: Clone repo
-          uses: actions/checkout@v2
-        - name: detekt
-          uses: alaegin/Detekt-Action@v1.22.0
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: detekt
+        uses: alaegin/Detekt-Action@v1.22.0
+
+  ##detekt:
+  ##  runs-on: ubuntu-latest
+  ##    steps:
+  ##      - name: Clone repo
+  ##        uses: actions/checkout@v2
+  ##      - name: detekt
+  ##        uses: alaegin/Detekt-Action@v1.22.0
